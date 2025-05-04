@@ -437,3 +437,59 @@ function generateThumbnail() {
     thumb.setAttribute("src", thumbnail);
   });
 }
+
+//
+const pdfFiles = ["file1.pdf", "file2.pdf"];
+
+const viewer = document.getElementById("pdfViewer");
+const modal = document.getElementById("pdfModal");
+
+const openPdf = (file) => {
+  viewer.src = "uploads/" + file;
+  modal.classList.add("active");
+};
+
+window.closeModal = () => {
+  viewer.src = "";
+  modal.classList.remove("active");
+};
+
+async function renderThumbnail(fileName) {
+  const url = "uploads/" + fileName;
+  const loadingTask = pdfjsLib.getDocument(url);
+  const pdf = await loadingTask.promise;
+  const page = await pdf.getPage(1);
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
+  const viewport = page.getViewport({ scale: 0.5 });
+  canvas.height = viewport.height;
+  canvas.width = viewport.width;
+  await page.render({ canvasContext: context, viewport }).promise;
+  return canvas.toDataURL();
+}
+
+(async function renderList() {
+  for (let file of pdfFiles) {
+    const thumb = await renderThumbnail(file);
+
+    const li = document.createElement("li");
+    li.className = "project-item active";
+    li.setAttribute("data-filter-item", "");
+    li.setAttribute("data-category", "web development");
+
+    li.innerHTML = `
+          <a href="javascript:void(0);" onclick="openPdf('${file}')">
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img src="${thumb}" alt="${file}" loading="lazy" />
+            </figure>
+            <h3 class="project-title">${file}</h3>
+            <p class="project-category">Web Development</p>
+          </a>
+        `;
+
+    document.getElementById("project-list").appendChild(li);
+  }
+})();
