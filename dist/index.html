@@ -717,16 +717,16 @@
                 <ul class="blog-posts-list">
                   <li class="blog-post-item">
                     <a href="#">
-                      <figure class="blog-banner-box">
+                      <!--<figure class="blog-banner-box">
                         <img
                           src="https://i.postimg.cc/DysCZrWs/blog-1.jpg"
                           alt="Design conferences in 2024"
                           loading="lazy"
                         />
-                      </figure>
+                      </figure> -->
 
                       <div class="blog-content">
-                        <div class="blog-meta">
+                        <!--<div class="blog-meta">
                           <p class="blog-category">Design</p>
                           <span class="dot"></span>
                           <time datetime="2024-02-23">Feb 23, 2024</time>
@@ -740,40 +740,40 @@
                           to take place, offering opportunities for
                           professionals and enthusiasts to connect, learn, and
                           share innovative ideas.
-                        </p>
+                        </p>-->
+                        <div
+                          id="gridDiv1"
+                          class="chartDiv"
+                          style="max-width: 500px"
+                        ></div>
                       </div>
                     </a>
                   </li>
 
                   <li class="blog-post-item">
-                    <a href="#">
-                      <figure class="blog-banner-box">
-                        <img
-                          src="https://i.postimg.cc/QC7qFDMs/blog-2.jpg"
-                          alt="Best fonts every designer"
-                          loading="lazy"
-                        />
-                      </figure>
-
-                      <div class="blog-content">
-                        <div class="blog-meta">
-                          <p class="blog-category">Design</p>
-                          <span class="dot"></span>
-                          <time datetime="2024-01-29">Jan 29, 2024</time>
-                        </div>
-
-                        <h3 class="h3 blog-item-title">
-                          Best fonts every designer
-                        </h3>
-                        <p class="blog-text">
-                          When it comes to typography, choosing the right font
-                          is essential for effective design. In this article,
-                          I'll bring a brief overview of some of the best fonts
-                          that every designer should consider incorporating into
-                          their toolkit.
-                        </p>
+                    <div
+                      id="chartDataGrid"
+                      style="max-width: 800px; height: 400px; margin: 0px auto"
+                    ></div>
+                    <div id="controls">
+                      <div id="dayBtn" class="categoryTab">Daily</div>
+                      <div id="weekBtn" class="categoryTab">Week</div>
+                      <div id="monthBtn" class="categoryTab active">Month</div>
+                      <div id="weekdayBtn" class="categoryTab">Weekday</div>
+                      <div id="groupByWrapper">
+                        <label for="calculationDD">Group by: </label>
+                        <select id="calculationDD">
+                          <option>sum</option>
+                          <option>mean</option>
+                          <option>min</option>
+                          <option>max</option>
+                        </select>
                       </div>
-                    </a>
+                    </div>
+                    <div
+                      id="container"
+                      style="max-width: 430px; height: 450px; margin: 0px auto"
+                    ></div>
                   </li>
 
                   <li class="blog-post-item">
