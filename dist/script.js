@@ -1,5 +1,7 @@
 "use strict";
-
+/**
+ * Complete site script in one page
+ */
 var chart;
 //Opening or closing side bar
 
