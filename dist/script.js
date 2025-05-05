@@ -445,7 +445,7 @@ const viewer = document.getElementById("pdfViewer");
 const modal = document.getElementById("pdfModal");
 
 const openPdf = (file) => {
-  viewer.src = "uploads/" + file;
+  viewer.src = `./uploads/${file}`;
   modal.classList.add("active");
 };
 

@@ -1,0 +1,57 @@
+@media screen and (max-width: 480px) {
+  .chart-thumb {
+    width: 80px;
+  }
+
+  .chartContainer {
+    height: 331px;
+  }
+
+  .modal-content {
+    width: auto;
+  }
+
+  #pdfModal .modal-close {
+    top: 0;
+    right: 5px;
+  }
+
+  .blogpage__chartDiv {
+    width: 200px;
+  }
+
+  .blogpage__chartDataGrid {
+    width: 200px;
+  }
+
+  .blogpage__chartDataGridControls {
+    justify-content: flex-start;
+  }
+  .blogpage__chartDataGridControls div#groupByWrapper {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 490px) and (max-width: 768px) {
+  .chartContainer {
+    height: 400px;
+  }
+
+  .testimonials-modal {
+    gap: 0;
+  }
+
+  .modal-content {
+    width: auto;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-content {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+}
