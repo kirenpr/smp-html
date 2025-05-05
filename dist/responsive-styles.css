@@ -17,18 +17,25 @@
   }
 
   .blogpage__chartDiv {
-    width: 200px;
+    width: auto;
+    margin: 0;
   }
 
   .blogpage__chartDataGrid {
-    width: 200px;
+    width: 235px;
+    overflow-x: scroll;
   }
 
   .blogpage__chartDataGridControls {
     justify-content: flex-start;
+    width: 235px;
   }
   .blogpage__chartDataGridControls div#groupByWrapper {
     text-align: left;
+  }
+
+  .blogpage__chartDataGridContainer {
+    width: 235px;
   }
 }
 
@@ -45,13 +52,84 @@
     width: auto;
     margin-left: 30px;
   }
+
+  .blogpage__chartDiv {
+    width: 600px;
+    max-width: 600px !important;
+    margin: 0;
+  }
+
+  .blogpage__chartDataGrid {
+    width: 595px;
+    overflow-x: scroll;
+  }
+  .blogpage__chartDataGridControls {
+    justify-content: flex-start;
+    width: 590px;
+    max-width: 600px;
+    margin: 15px 15px;
+  }
+  .blogpage__chartDataGridContainer {
+    width: 595px;
+    max-width: 600px !important;
+    margin: 15px 15px !important;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .modal-content {
     width: 700px;
   }
+
+  .blogpage__chartDiv {
+    width: 825px;
+    max-width: 900px !important;
+  }
+
+  .blogpage__chartDataGrid {
+    width: 825px;
+    max-width: 900px !important;
+  }
+
+  .blogpage__chartDataGridControls {
+    width: 825px;
+    margin-top: 35px !important;
+    max-width: 900px !important;
+    margin-left: 17px !important;
+  }
+
+  .blogpage__chartDataGridContainer {
+    width: 825px;
+    margin-top: 35px !important;
+    max-width: 900px !important;
+    margin-left: 17px !important;
+  }
 }
 
 @media screen and (min-width: 1025px) {
+  .blogpage__chartDiv {
+    width: 810px;
+    max-width: 900px !important;
+  }
+
+  .blogpage__chartDataGrid {
+    width: 808px;
+    margin-top: 35px !important;
+    max-width: 900px !important;
+    margin-left: 9px !important;
+  }
+
+  .blogpage__chartDataGridControls {
+    width: 808px;
+    margin-top: 35px !important;
+    max-width: 900px !important;
+    margin-left: 9px !important;
+  }
+
+  .blogpage__chartDataGridContainer {
+    width: 808px;
+    margin-top: 35px !important;
+    max-width: 900px !important;
+    margin-left: 9px !important;
+  }
 }
