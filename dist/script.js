@@ -638,7 +638,7 @@ function viewToOptions(view, calc) {
   };
 }
 
-JSC.fetch("stepData17-18.csv")
+JSC.fetch("data-blog.csv")
   .then(function (response) {
     return response.text();
   })
