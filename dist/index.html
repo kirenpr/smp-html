@@ -669,16 +669,21 @@
             </div>
 
             <ul class="project-list" id="project-list"></ul>
-            <div class="modal" id="pdfModal">
-              <div class="modal-close" onclick="closeModal()">✖</div>
-              <iframe
+            <div class="modal-container" data-modal-container id="pdfModal">
+              <div class="overlay" data-overlay></div>
+
+              <section class="testimonials-modal">
+                <button class="modal-close-btn" data-modal-close-btn>
+                  <ion-icon name="close-outline"></ion-icon>
+                </button>
+                <iframe
                 id="pdfViewer"
                 width="100%"
                 height="100%"
                 style="border: none"
               ></iframe>
+              </section>
             </div>
-          </section>
         </article>
 
         <article class="blog" data-page="blog">

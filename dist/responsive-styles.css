@@ -11,10 +11,17 @@
     width: auto;
   }
 
-  #pdfModal .modal-close {
+  #pdfModal iframe {
+    width: 334px;
+    height: 560px;
+  }
+
+  /* #pdfModal .modal-close {
     top: 0;
     right: 0;
-  }
+    z-index: 99999;
+    position: relative;
+  } */
 
   .blogpage__chartDiv {
     width: auto;
